@@ -1,0 +1,7 @@
+
+@media (min-width: 992px) {
+  .ftco_navbar .navbar-nav .dropdown:hover > .dropdown-menu {
+    display: bloc;
+    margin-top: 0;
+  }
+}
