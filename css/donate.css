@@ -1,0 +1,80 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+        }
+        /* Continuous Auto-Scrolling Logo Slider CSS */
+        .logo-slider {
+            background: #ffffff;
+            overflow: hidden;
+            padding: 20px 0;
+            white-space: nowrap;
+            position: relative;
+        }
+        .logo-slider:hover .logo-slide-track {
+            animation-play-state: paused;
+        }
+        .logo-slide-track {
+            display: inline-block;
+            animation: 25s scrollContinuous linear infinite;
+        }
+        .partner-card {
+            display: inline-block;
+            width: 170px;
+            height: 90px;
+            margin: 0 12px;
+            vertical-align: middle;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+            border: 1px solid #e2e8f0;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+        }
+        .partner-card:hover {
+            transform: scale(1.08);
+            border-color: #198754;
+        }
+        .partner-logo {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @keyframes scrollContinuous {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .donor-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #198754;
+        }
+        .qr-box {
+            border: 2px dashed #198754;
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            background: #f0fdf4;
+        }
+        /* Left to Right Animation */
+@keyframes scrollLeftToRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.logo-slide-track-ltr {
+  display: flex;
+  width: max-content;
+  animation: scrollLeftToRight 35s linear infinite;
+}
+.logo-slide-track-ltr:hover {
+  animation-play-state: paused;
+}

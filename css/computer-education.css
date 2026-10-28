@@ -1,0 +1,895 @@
+/* ================= COMPUTER EDUCATION PAGE CSS ================= */
+/* All new styles specific to Computer Education page go here */
+
+/* Program Cards Grid */
+.ce-program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.ce-program-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  border-top: 4px solid #0284c7;
+}
+
+.ce-program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: #0284c7;
+}
+
+.ce-program-card .card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.ce-program-card h4 {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.ce-program-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.ce-program-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.ce-program-card ul li {
+  padding: 4px 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.ce-program-card ul li::before {
+  content: "✔ ";
+  color: #28a745;
+  font-weight: bold;
+}
+
+.ce-program-card .badge-level {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.ce-program-card .badge-beginner {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.ce-program-card .badge-intermediate {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.ce-program-card .badge-advanced {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.ce-program-card .btn-register {
+  display: inline-block;
+  padding: 8px 24px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: #ffffff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ce-program-card .btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+  color: #fff;
+}
+
+/* Impact Stats Section */
+.ce-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.ce-impact-card {
+  text-align: center;
+  padding: 35px 20px;
+  border-radius: 16px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
+.ce-impact-card h2 {
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.ce-impact-card p {
+  opacity: 0.9;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* How It Works Section */
+.ce-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.ce-step-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.ce-step-number {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.ce-step-card h4 {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.ce-step-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Registration Form */
+.ce-register-section {
+  padding: 6em 0;
+}
+
+.ce-register-box {
+  padding: 50px;
+  border-radius: 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.2);
+}
+
+.ce-register-box h2 {
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.ce-register-box .lead {
+  opacity: 0.9;
+  margin-bottom: 35px;
+}
+
+.ce-register-box .form-control {
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.ce-register-box .form-control:focus {
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+  border-color: transparent;
+}
+
+.ce-register-box select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  padding-right: 40px;
+}
+
+.ce-register-box .btn-submit {
+  display: inline-block;
+  padding: 12px 40px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.ce-register-box .btn-submit:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  color: #fff;
+}
+
+/* CTA Section */
+.ce-cta-section {
+  padding: 5em 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .ce-impact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ce-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ce-program-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .ce-impact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= STUDENT TESTIMONIAL SLIDER ================= */
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: slideLeft 20s linear infinite;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+.ce-testimonial-card {
+  flex: 0 0 auto;
+  width: 320px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.ce-testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #0284c7;
+}
+
+.ce-testimonial-card .card-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #e2e8f0;
+}
+
+.ce-testimonial-card .card-info {
+  text-align: left;
+}
+
+.ce-testimonial-card .card-name {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.ce-testimonial-card .card-branch {
+  font-size: 0.8rem;
+  color: #0284c7;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.ce-testimonial-card .card-comment {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .ce-testimonial-card {
+    width: 280px;
+  }
+}
+
+/* ================= WHAT STUDENT LEARNED ================= */
+.ce-skill-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 50px 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  height: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ce-skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #0284c7;
+}
+
+.ce-skill-card .skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.ce-skill-card h5 {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.ce-skill-card p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 576px) {
+  .ce-skill-card {
+    padding: 20px 15px;
+  }
+  .ce-skill-card .skill-icon {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   TLF COMPUTER EDUCATION & DIGITAL EMPOWERMENT CSS
+   (Strictly Content & Structure. Excludes Nav, Video Hero, and Footer)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL CONTAINER CENTERING (Matches Overview & Index)
+   -------------------------------------------------------------------------- */
+.about-view-wrapper,
+.ftco-section {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.ce-section-padding {
+  padding: 4.5rem 0 !important;
+}
+
+/* Force standard responsive Bootstrap container constraints */
+.about-view-wrapper .container,
+.ftco-section .container {
+  width: 100%;
+  max-width: 1140px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  box-sizing: border-box;
+}
+
+/* Section Header Typography */
+.section-header-sub {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0284c7;
+  margin-bottom: 6px;
+}
+
+.section-header-title {
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 2.15rem;
+  margin-bottom: 8px;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #28a745, #d4af37);
+  margin: 12px auto 0 auto;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   2. INTRO / MISSION CARD
+   -------------------------------------------------------------------------- */
+.content-card {
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  border-left: 6px solid #0284c7 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.ce-lead-paragraph {
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.ce-quote-block {
+  background: #f8fafc;
+  border-left: 3px solid #28a745;
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. PROGRESSIVE CURRICULUM TOGGLES & CARDS
+   -------------------------------------------------------------------------- */
+.ce-toggle-pills-box {
+  background: #e2e8f0;
+  padding: 6px;
+  border-radius: 50px;
+  display: inline-flex;
+}
+
+.ce-toggle-pill {
+  border: none;
+  background: transparent;
+  padding: 10px 24px;
+  font-weight: 700;
+  color: #475569;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline: none !important;
+}
+
+.ce-toggle-pill.active {
+  background: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+}
+
+.ce-interactive-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px 22px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.ce-interactive-card:hover {
+  transform: translateY(-5px);
+  border-color: #0284c7;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.ce-icon-bubble {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.bg-light-blue  { background: #e0f2fe; color: #0284c7; }
+.bg-light-green { background: #dcfce7; color: #16a34a; }
+.bg-light-amber { background: #fef3c7; color: #d97706; }
+
+.ce-stream-badge {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.ce-feature-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.ce-feature-list li {
+  padding: 3px 0;
+}
+
+.ce-feature-list li::before {
+  content: "✓ ";
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Secondary Advanced Terminal */
+.ce-advanced-terminal {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border: 1px solid #334155;
+  border-radius: 20px;
+}
+
+.ce-syntax-pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #38bdf8;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.ce-code-window {
+  background: #090d16;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.code-window-header {
+  background: #1e293b;
+  padding: 10px 15px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-family: monospace;
+}
+
+.window-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.window-dots span:nth-child(1) { background: #ef4444; }
+.window-dots span:nth-child(2) { background: #f59e0b; }
+.window-dots span:nth-child(3) { background: #10b981; }
+
+.code-window-body {
+  padding: 18px;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #f8fafc;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.code-keyword { color: #f43f5e; font-weight: bold; }
+.code-type    { color: #38bdf8; }
+.code-string  { color: #a3e635; }
+.code-comment { color: #64748b; font-style: italic; }
+
+/* --------------------------------------------------------------------------
+   4. METRICS / STAT TILES
+   -------------------------------------------------------------------------- */
+.ce-metric-card {
+  padding: 15px;
+}
+
+.metric-number {
+  font-weight: 800;
+  font-size: 2.8rem;
+  color: #4ade80;
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+
+.metric-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.metric-sub {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   5. REGIONAL BRANCHES
+   -------------------------------------------------------------------------- */
+.ce-branch-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px 24px;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ce-branch-card:hover,
+.ce-branch-card.active {
+  border-color: #0284c7;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(2, 132, 199, 0.08);
+}
+
+.ce-branch-ping {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+/* --------------------------------------------------------------------------
+   6. BENTO COMPETENCY CARDS
+   -------------------------------------------------------------------------- */
+.ce-competency-tile {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 30px 20px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.ce-competency-tile:hover {
+  transform: translateY(-4px);
+  border-color: #0284c7;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.comp-icon {
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .section-header-title { font-size: 1.85rem; }
+}
+
+@media (max-width: 767.98px) {
+  .ce-toggle-pills-box {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   IMAGE FRAMES & VISUAL ENHANCEMENTS FOR COMPUTER EDUCATION
+   ========================================================================== */
+
+/* Main Mission Side Image Frame */
+.ce-image-frame-wrap {
+  position: relative;
+  padding: 10px;
+}
+
+.ce-image-frame {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+  border: 4px solid #ffffff;
+  background: #0f172a;
+}
+
+.ce-image-frame img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.ce-image-frame:hover img {
+  transform: scale(1.04);
+}
+
+.ce-frame-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 16px;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.85) 100%);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.ce-badge-floating {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+}
+
+.dot-live {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulseGreen 1.6s infinite;
+}
+/* ==========================================================================
+   IMAGE GRID & OVERFLOW FIXES (Prevents bleed, overlap, and touching)
+   ========================================================================== */
+
+/* 1. Prevent Flexbox columns from expanding beyond their 33.333% width */
+.row > [class*="col-"] {
+  min-width: 0 !important; /* Critical: stops large images from breaking column width */
+}
+
+/* 2. Photo Essay Strip (Section 2 - Fixes Image 1 Overlap) */
+.ce-photo-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden !important; /* Clips all image spillover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ce-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.09);
+}
+
+.ce-photo-box {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden !important;
+  background: #0f172a;
+}
+
+.ce-photo-box img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center;
+  display: block !important;
+}
+
+/* 3. Branch Cards (Section 5 - Fixes Image 2 Edge-to-Edge Touching) */
+.ce-branch-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ce-branch-card:hover,
+.ce-branch-card.active {
+  border-color: #0284c7;
+  transform: translateY(-4px);
+}
+
+.ce-branch-thumb {
+  width: 100%;
+  height: 170px;
+  position: relative;
+  overflow: hidden !important;
+  background: #0f172a;
+}
+
+.ce-branch-thumb img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center;
+  display: block !important;
+}

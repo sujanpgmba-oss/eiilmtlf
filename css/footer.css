@@ -1,0 +1,221 @@
+  /* =========================================
+   CUSTOM TLF FOOTER
+   ========================================= */
+.tlf-custom-footer {
+  background-color: #212121;
+  color: #c4c4c4;
+  font-family: 'Poppins', sans-serif;
+  padding: 60px 0 25px 0;
+  font-size: 0.95rem;
+}
+
+.tlf-footer-main {
+  margin-bottom: 45px;
+}
+
+/* Section Headings */
+.tlf-footer-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #555555;
+}
+
+/* About Us & Social */
+.tlf-about-text {
+  color: #b0b0b0;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 0.92rem;
+}
+
+.tlf-social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.tlf-social-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #313131;
+  color: #ffffff !important;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.tlf-social-circle:hover {
+  background-color: #28a745;
+  transform: translateY(-2px);
+}
+
+/* Recent Initiatives */
+.tlf-initiative-title a {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.tlf-initiative-title a:hover {
+  color: #28a745;
+}
+
+.tlf-initiative-meta {
+  color: #888888;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  display: flex;
+  gap: 15px;
+}
+
+/* Quick Links Container */
+.tlf-footer-links {
+  position: relative;
+}
+
+.tlf-footer-links > li {
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.tlf-footer-links a {
+  color: #c4c4c4;
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: block;
+}
+
+.tlf-footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Parent Trigger with Arrow Indicator */
+.tlf-parent-trigger {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.tlf-chevron {
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #718096;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.tlf-nav-parent:hover .tlf-chevron {
+  color: #28a745;
+  transform: translateX(4px);
+}
+
+.tlf-nav-parent:hover > a {
+  color: #28a745 !important;
+}
+
+/* Side Flyout Dropdown Panel */
+.tlf-sub-links-flyout {
+  position: absolute;
+  top: 0;
+  left: 95%;
+  min-width: 210px;
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-left: 3px solid #28a745;
+  border-radius: 6px;
+  padding: 10px 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 999;
+}
+
+/* Open flyout list to the side on hover */
+.tlf-nav-parent:hover .tlf-sub-links-flyout {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Flyout list items */
+.tlf-sub-links-flyout li {
+  margin: 6px 0;
+}
+
+.tlf-sub-links-flyout a {
+  color: #a0aec0;
+  font-size: 0.85rem;
+  padding: 3px 0;
+  transition: all 0.2s ease;
+}
+
+.tlf-sub-links-flyout a:hover {
+  color: #28a745;
+  padding-left: 6px;
+}
+
+/* Mobile responsive fallback: expand inline below on small screens */
+@media (max-width: 991px) {
+  .tlf-sub-links-flyout {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    background-color: #292929;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    display: none;
+  }
+  
+  .tlf-nav-parent:hover .tlf-sub-links-flyout {
+    display: block;
+  }
+}
+/* Contact Info list */
+.tlf-contact-icon {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-right: 14px;
+  margin-top: 3px;
+  min-width: 18px;
+}
+
+.tlf-contact-text {
+  color: #c4c4c4;
+  text-decoration: none;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+a.tlf-contact-text:hover {
+  color: #ffffff;
+}
+
+/* Copyright line */
+.tlf-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 25px;
+  color: #808080;
+  font-size: 0.88rem;
+}

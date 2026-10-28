@@ -1,0 +1,62 @@
+/* --- Awards & Recognition (Upcoming / Coming Soon) Styles --- */
+:root {
+  --tlf-green: #28a745;
+  --tlf-dark-green: #155724;
+  --tlf-navy: #0f172a;
+  --tlf-gold: #d4af37;
+  --tlf-light-bg: #f8fafc;
+  --tlf-card-border: #e2e8f0;
+}
+
+.about-view-wrapper {
+  width: 100%;
+  min-height: 70vh;
+  padding: 60px 20px;
+  background: #f8fafc;
+  font-family: 'Overpass', sans-serif;
+}
+
+/* Coming Soon Box Container */
+.coming-soon-box {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 24px;
+  padding: 70px 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.btn-hero-explore {
+  background-color: #ffffff;
+  color: #008000;
+  border: 2px solid #008000;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-explore:hover {
+  background-color: #008000;
+  color: #ffffff;
+}
+
+/* Spinning Pulse Indicator */
+.coming-soon-pulse {
+  width: 70px;
+  height: 70px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-left-color: var(--tlf-gold);
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+  margin: 0 auto 25px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

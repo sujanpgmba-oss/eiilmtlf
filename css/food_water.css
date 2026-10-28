@@ -1,0 +1,433 @@
+
+
+/* ==================== ROW LAYOUT ==================== */
+
+.thc-initiative{
+  --thc-green: #1f9d55;
+  --thc-green-dark: #167a43;
+  --thc-ink: #16181d;
+  --thc-muted: #667085;
+  --thc-paper: #f7f9fb;
+  --thc-card-bg: #ffffff;
+  --thc-border: #e6e9ee;
+
+  background: var(--thc-paper);
+  color: var(--thc-ink);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.thc-initiative *{ box-sizing: border-box; }
+
+.thc-initiative .thc-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 6rem;
+  margin-left: 260px;
+}
+
+/* ---------- Scroll progress bar ---------- */
+.thc-initiative .thc-scroll-progress{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 100;
+}
+
+.thc-initiative .thc-scroll-progress-bar{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--thc-green), #a5d97a);
+  transition: width 0.1s ease-out;
+}
+
+/* ---------- Heading block ---------- */
+.thc-initiative .thc-heading-block{
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  margin-left: 200px;
+}
+
+.thc-initiative .thc-eyebrow{
+  color: var(--thc-green);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+
+.thc-initiative .thc-heading-block h1{
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.25;
+  margin: 0;
+  font-weight: 800;
+}
+
+.thc-initiative .thc-underline{
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 1.4rem auto;
+  background: linear-gradient(90deg, var(--thc-green), #a5d97a);
+  border-radius: 2px;
+}
+
+.thc-initiative .thc-lead{
+  color: var(--thc-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------- Alternating rows ---------- */
+.thc-initiative .thc-row{
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+  margin-bottom: 6.5rem;
+  margin-left: 100px;
+}
+
+.thc-initiative .thc-row.thc-reverse .thc-visual{ order: 2; }
+.thc-initiative .thc-row.thc-reverse .thc-text-box{ order: 1; }
+
+@media (max-width: 800px){
+  .thc-initiative .thc-row,
+  .thc-initiative .thc-row.thc-reverse{ flex-direction: column; gap: 1.2rem; }
+  .thc-initiative .thc-row.thc-reverse .thc-visual{ order: 1; }
+  .thc-initiative .thc-row.thc-reverse .thc-text-box{ order: 2; }
+  .thc-initiative .thc-visual{ flex-basis: auto; width: 100%; max-width: 300px; margin: 0 auto; }
+  .thc-initiative .thc-text-box{ max-width: 100%; margin: 0 auto; }
+}
+
+/* Image box: green border, hover zoom. Drop your own image into the <img> tag. */
+.thc-initiative .thc-visual{
+  position: relative;
+  flex: 0 0 300px;
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  background: #e8f6ee;
+  border: 2px solid var(--thc-green);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.thc-initiative .thc-visual:hover{
+  box-shadow: 0 18px 32px rgba(31, 157, 85, 0.2);
+  border-color: var(--thc-green-dark);
+}
+
+.thc-initiative .thc-visual img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.thc-initiative .thc-visual:hover img{
+  transform: scale(1.12);
+}
+
+.thc-initiative .thc-visual.thc-featured{
+  border-color: var(--thc-green-dark);
+}
+
+/* Text box: matched to the visual box's footprint, extended wider */
+.thc-initiative .thc-text-box{
+  flex: 1 1 auto;
+  max-width: 620px;
+  background: var(--thc-card-bg);
+  border: 1px solid var(--thc-border);
+  border-radius: 14px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.thc-initiative .thc-text-box .thc-index{
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--thc-green);
+  margin-bottom: 0.6rem;
+}
+
+.thc-initiative .thc-text-box h3{
+  font-size: 1.2rem;
+  margin: 0 0 0.7rem;
+  line-height: 1.35;
+}
+
+.thc-initiative .thc-text-box p{
+  color: var(--thc-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0 0 1.2rem;
+}
+
+.thc-initiative .thc-know-more{
+  color: var(--thc-green-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: gap 0.25s ease;
+}
+
+.thc-initiative .thc-know-more:hover{
+  gap: 0.55rem;
+}
+
+/* ---------- Scroll reveal ---------- */
+.thc-initiative .thc-reveal{
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.thc-initiative .thc-reveal.thc-fade-left{ transform: translateX(-50px) scale(0.96); }
+.thc-initiative .thc-reveal.thc-fade-right{ transform: translateX(50px) scale(0.96); }
+
+.thc-initiative .thc-reveal.thc-visible{
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Cascading reveal for the content inside each text box */
+.thc-initiative .thc-text-box .thc-index,
+.thc-initiative .thc-text-box h3,
+.thc-initiative .thc-text-box p,
+.thc-initiative .thc-text-box .thc-know-more{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.thc-initiative .thc-text-box.thc-visible .thc-index{ opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.thc-initiative .thc-text-box.thc-visible h3{ opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+.thc-initiative .thc-text-box.thc-visible p{ opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+.thc-initiative .thc-text-box.thc-visible .thc-know-more{ opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce){
+  .thc-initiative .thc-reveal{ transition: none; opacity: 1; transform: none; }
+  .thc-initiative .thc-text-box .thc-index,
+  .thc-initiative .thc-text-box h3,
+  .thc-initiative .thc-text-box p,
+  .thc-initiative .thc-text-box .thc-know-more{
+    transition: none; opacity: 1; transform: none;
+  }
+  .thc-initiative .thc-visual,
+  .thc-initiative .thc-visual img,
+  .thc-initiative .thc-know-more{ transition: none; }
+}
+
+/* Text box hover: lift + slight grow, placed after reveal rules so it wins */
+.thc-initiative .thc-text-box:hover{
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 32px rgba(31, 157, 85, 0.16);
+  border-color: var(--thc-green);
+}
+
+
+
+
+
+
+/* ==================== CARD SLIDER ==================== */
+
+
+
+
+
+
+
+.thc-slider-widget{
+  --thc-green: #1f9d55;
+  --thc-green-dark: #167a43;
+  --thc-ink: #16181d;
+  --thc-muted: #667085;
+  --thc-paper: #f7f9fb;
+  --thc-card-bg: #ffffff;
+  --thc-border: #e6e9ee;
+
+  background: var(--thc-paper);
+  color: var(--thc-ink);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.thc-slider-widget *{ box-sizing: border-box; }
+
+.thc-slider-widget .thc-wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 6rem;
+}
+
+.thc-slider-widget .thc-heading-wrap{
+  padding-bottom: 0;
+}
+
+.thc-slider-widget .thc-heading-wrap .thc-heading-block{
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Heading block ---------- */
+.thc-slider-widget .thc-heading-block{
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 4rem;
+}
+
+.thc-slider-widget .thc-eyebrow{
+  color: var(--thc-green);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+
+.thc-slider-widget .thc-heading-block h1{
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.25;
+  margin: 0;
+  font-weight: 800;
+}
+
+.thc-slider-widget .thc-underline{
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin: 1.4rem auto;
+  background: linear-gradient(90deg, var(--thc-green), #a5d97a);
+  border-radius: 2px;
+}
+
+.thc-slider-widget .thc-lead{
+  color: var(--thc-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ---------- Auto-scrolling card carousel ---------- */
+.thc-slider-widget .thc-carousel-wrap{
+  padding-top: 0;
+}
+
+.thc-slider-widget .thc-carousel-title{
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  margin: 0;
+}
+
+.thc-slider-widget .thc-carousel{
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.thc-slider-widget .thc-carousel-track{
+  display: flex;
+  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.thc-slider-widget .thc-carousel-slide{
+  flex: 0 0 100%;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.thc-slider-widget .thc-mini-card{
+  flex: 1 1 0;
+  background: var(--thc-card-bg);
+  border: 1px solid var(--thc-border);
+  border-radius: 14px;
+  padding: 1.6rem 1.4rem;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.thc-slider-widget .thc-mini-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px rgba(31, 157, 85, 0.14);
+  border-color: var(--thc-green);
+}
+
+.thc-slider-widget .thc-mini-icon{
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: #e8f6ee;
+  color: var(--thc-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s ease;
+}
+
+.thc-slider-widget .thc-mini-card:hover .thc-mini-icon{
+  transform: scale(1.12);
+}
+
+.thc-slider-widget .thc-mini-icon svg{
+  width: 22px;
+  height: 22px;
+}
+
+.thc-slider-widget .thc-mini-card h4{
+  font-size: 1rem;
+  margin: 0 0 0.4rem;
+}
+
+.thc-slider-widget .thc-mini-card p{
+  font-size: 0.85rem;
+  color: var(--thc-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.thc-slider-widget .thc-carousel-dots{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.8rem;
+}
+
+.thc-slider-widget .thc-dot{
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: var(--thc-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.thc-slider-widget .thc-dot-active{
+  background: var(--thc-green);
+  transform: scale(1.2);
+}
+
+@media (max-width: 700px){
+  .thc-slider-widget .thc-carousel-slide{
+    flex-wrap: wrap;
+  }
+  .thc-slider-widget .thc-mini-card{
+    flex: 1 1 100%;
+  }
+}
