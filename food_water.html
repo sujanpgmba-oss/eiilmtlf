@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,700;1,800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Food & Water Distribution - Towards Life Foundation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/awards.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <style>
+      .thc-initiative {
+        --thc-green: #1f9d55;
+        --thc-green-dark: #167a43;
+        --thc-ink: #16181d;
+        --thc-muted: #667085;
+        --thc-paper: #f7f9fb;
+        --thc-card-bg: #ffffff;
+        --thc-border: #e6e9ee;
+
+        background: var(--thc-paper);
+        color: var(--thc-ink);
+        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        padding-top: 2rem;
+      }
+
+      .thc-initiative * { box-sizing: border-box; }
+
+      .thc-initiative .thc-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+      }
+
+      .thc-initiative .thc-heading-block {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto 3.5rem;
+      }
+
+      .thc-initiative .thc-eyebrow {
+        color: var(--thc-green);
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin: 0 0 1rem;
+      }
+
+      .thc-initiative .thc-heading-block h1 {
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        line-height: 1.25;
+        margin: 0;
+        font-weight: 800;
+      }
+
+      .thc-initiative .thc-underline {
+        display: block;
+        width: 70px;
+        height: 3px;
+        margin: 1.4rem auto;
+        background: linear-gradient(90deg, var(--thc-green), #a5d97a);
+        border-radius: 2px;
+      }
+
+      .thc-initiative .thc-lead {
+        color: var(--thc-muted);
+        font-size: 1.02rem;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      /* Zigzag Layout Style */
+      .thc-initiative .thc-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        margin-bottom: 5rem;
+      }
+
+      .thc-initiative .thc-row.thc-reverse { flex-direction: row-reverse; }
+
+      @media (max-width: 800px) {
+        .thc-initiative .thc-row,
+        .thc-initiative .thc-row.thc-reverse { flex-direction: column; gap: 1.5rem; }
+      }
+
+      .thc-initiative .thc-visual {
+        position: relative;
+        flex: 0 0 320px;
+        width: 320px;
+        aspect-ratio: 1 / 1;
+        background: #e8f6ee;
+        border: 2px solid var(--thc-green);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(31, 157, 85, 0.1);
+        transition: box-shadow 0.35s ease, border-color 0.35s ease;
+      }
+
+      .thc-initiative .thc-visual:hover {
+        box-shadow: 0 18px 32px rgba(31, 157, 85, 0.2);
+        border-color: var(--thc-green-dark);
+      }
+
+      .thc-initiative .thc-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      .thc-initiative .thc-visual:hover img {
+        transform: scale(1.1);
+      }
+
+      .thc-initiative .thc-text-box {
+        flex: 1 1 auto;
+        max-width: 620px;
+        background: var(--thc-card-bg);
+        border: 1px solid var(--thc-border);
+        border-radius: 14px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      }
+
+      .thc-initiative .thc-text-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 32px rgba(31, 157, 85, 0.12);
+        border-color: var(--thc-green);
+      }
+
+      .thc-initiative .thc-text-box .thc-index {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--thc-green);
+        margin-bottom: 0.6rem;
+      }
+
+      .thc-initiative .thc-text-box h3 {
+        font-size: 1.3rem;
+        margin: 0 0 0.7rem;
+        line-height: 1.35;
+        font-weight: 700;
+      }
+
+      .thc-initiative .thc-text-box p {
+        color: var(--thc-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin: 0 0 1.2rem;
+      }
+
+      .thc-slider-widget {
+        background: var(--thc-paper);
+        color: var(--thc-ink);
+        padding-bottom: 4rem;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+      }
+      .thc-slider-widget .thc-wrapper { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+@media (min-width: 992px) {
+  .ftco_navbar .navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+  }
+}
+    </style>
+  </head>
+  <body>
+    
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top ftco_navbar" id="ftco-navbar">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand" href="index.html#home-section">
+          <img src="images/logo.png" alt="TLF Logo" onerror="this.style.display='none'">
+          <span>TOWARDS LIFE FOUNDATION</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item"><a href="index.html#home-section" class="nav-link">HOME</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+              <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="aboutDropdown">
+                <a class="dropdown-item" href="overview.html">Overview & Identity</a>
+                <a class="dropdown-item" href="vision.html">Our Vision</a>
+                <a class="dropdown-item" href="voice-of-leaders.html">Voice of Leaders</a>
+                <a class="dropdown-item" href="administrative.html">Administrative Hierarchy</a>
+                <a class="dropdown-item" href="future-initiatives.html">Future Initiatives</a>
+                <a class="dropdown-item" href="branches.html">Branches</a>
+              </div>
+            </li>    
+     
+                        <!-- Dropdown: RANGE OF ACTIVITIES -->
+<li class="nav-item dropdown">
+  <a 
+    class="nav-link dropdown-toggle" 
+    href="Range of activities.html" 
+    id="activitiesDropdown" 
+    role="button" 
+    data-toggle="dropdown" 
+    aria-haspopup="true" 
+    aria-expanded="false"
+  >
+    RANGE OF ACTIVITIES
+  </a>
+  <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="activitiesDropdown">
+    <a class="dropdown-item" href="computer-education.html">Computer Education</a>
+    <a class="dropdown-item" href="healthcare-&-medical.html">Healthcare & Medical</a>
+    <a class="dropdown-item" href="food_water.html">Food & Water Supply</a>
+    <a class="dropdown-item" href="culture.html">Cultural & Art Work</a>
+     <a class="dropdown-item" href="flood-relief-and-humanitarian-response.html">Flood Relief and Humanitarian Response</a>
+  </div>
+</li>                
+            </li>                     
+            <li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li class="nav-item"><a href="shop.html" class="nav-link">OUR SHOP</a></li>
+            <li class="nav-item"><a href="donate.html" class="nav-link">DONATE</a></li>
+            <li class="nav-item"><a href="success story.html" class="nav-link">Success Stories</a></li>
+            <li class="nav-item"><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+            <!-- Action Buttons Group (Single Line) -->
+            <li class="nav-item">
+              <div class="nav-actions-group">
+                <!-- User / Volunteer Login -->
+                <a href="javascript:void(0)" class="btn-nav-login" data-toggle="modal" data-target="#userLoginModal">
+                  <span class="icon-user"></span> LOGIN
+                </a>
+
+                <!-- Admin Authority Gateway -->
+                <a href="javascript:void(0)" class="btn-nav-admin" onclick="openAdminPortal()">
+                  <span class="icon-shield"></span> ADMIN PANEL
+                  <span class="admin-badge">PORTAL</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR --  
+    <-- HERO SECTION -->
+    <section class="eiilm-hero-section" style="min-height: 75vh; padding: 60px 0;">
+      <div class="hero-video-bg">
+        <video autoplay muted loop playsinline poster="videos/Slide show.mp4">
+          <source src="videos/Slide show.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-dark-overlay"></div>
+      <div class="container hero-container">
+        <div class="row align-items-center min-vh-75">
+          <div class="col-lg-6 col-md-9 col-sm-12 hero-text-col">
+            <h1 class="hero-title">
+              Food and Water Distribution<br>
+              <span>Towards Life Foundation</span>
+            </h1>
+            <div class="hero-btn-wrap" style="margin-top: 20px;">
+  <a href="index.html#about-section" class="btn-hero-explore" style="background-color: #ffffff; color: #008000; border: 2px solid #008000; font-weight: 700; padding: 12px 28px; border-radius: 6px; text-decoration: none; display: inline-block; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#008000'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#ffffff'; this.style.color='#008000';">
+    Explore About Us
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-social-sidebar d-none d-md-flex">
+        <a href="#" class="social-icon fb"><i class="icon-facebook"></i></a>
+        <a href="#" class="social-icon insta"><i class="icon-instagram"></i></a>
+        <a href="#" class="social-icon in"><i class="icon-linkedin"></i></a>
+        <a href="#" class="social-icon yt"><i class="icon-youtube"></i></a>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT WITH ZIG-ZAG PHOTO LAYOUT -->
+    <div class="thc-initiative">
+      <section class="thc-wrapper">
+        <div class="thc-heading-block">
+          <p class="thc-eyebrow">Core Initiative</p>
+          <h1>Food and Water Distribution</h1>
+          <span class="thc-underline"></span>
+          <p class="thc-lead">TLF recognizes that adequate nutrition and access to safe drinking water are fundamental to children's physical development, well-being, and ability to participate effectively in education.</p>
+        </div>
+     
+        <!-- Zigzag Item 1 (Image Left, Text Right) -->
+        <div class="thc-row">
+          <div class="thc-visual">
+            <img src="images/Nutritious.png" alt="Daily Nutritious Meals" onerror="this.src='videos/Slide show.mp4'">
+          </div>
+          <div class="thc-text-box">
+            <span class="thc-index">01</span>
+            <h3>Daily Nutritious Meals</h3>
+            <p>Balanced meals and nutritious snacks are provided to students attending classes across TLF branches. This initiative aims to address nutritional needs while creating a supportive environment for learning and development.</p>
+            <p style="font-size: 0.88rem; color: #4caf50; font-weight: 600;">Empowering healthy minds through wholesome daily nutrition and care.</p>
+          </div>
+        </div>
+     
+        <!-- Zigzag Item 2 (Text Left, Image Right - Reversed) -->
+        <div class="thc-row thc-reverse">
+          <div class="thc-visual">
+            <img src="images/Water Distribution.png" alt="Summer Water Distribution" onerror="this.src='videos/Slide show.mp4'">
+          </div>
+          <div class="thc-text-box">
+            <span class="thc-index">02</span>
+            <h3>Summer Water Distribution</h3>
+            <p>During the summer months, particularly during periods of extreme heat, TLF organizes dedicated water-distribution initiatives at strategic locations across Kolkata. These programmes provide drinking water to street-connected children and members of the wider community, including passersby.</p>
+            <p style="font-size: 0.88rem; color: #2196f3; font-weight: 600;">Providing relief, hydration, and compassion during scorching summer heatwaves across Kolkata.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+     <!-- STANDALONE ADMIN PANEL SECTION (CONTROL MATRIX) -->
+    <section id="admin-section" class="ftco-section bg-light" style="display: none; padding: 6em 0; border-top: 3px solid #f59e0b;">
+      <div class="container">
+        
+        <div class="row justify-content-between align-items-center mb-5 pb-2">
+          <div class="col-md-8">
+            <span class="badge badge-warning text-dark font-weight-bold px-3 py-2 mb-2" id="adminSessionEmpBadge">ADMIN SESSION ACTIVE</span>
+            <h2 class="font-weight-bold text-dark mb-1">TLF Administrative Management Suite</h2>
+            <p class="text-muted">Client-side standalone controls: manage live inventories, student volunteers, and audit logs without external backend dependencies.</p>
+          </div>
+          <div class="col-md-4 text-md-right mt-3 mt-md-0">
+            <a href="admin.html" class="btn btn-success font-weight-bold px-4 py-2 shadow-sm mr-2">
+              <span class="icon-file-excel-o mr-1"></span> Excel Data Dashboard
+            </a>
+            <button class="btn btn-danger font-weight-bold px-4 py-2 shadow-sm" onclick="exitAdminSession()">
+              <span class="icon-power-off mr-1"></span> Log Out Admin
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-3">
+            <div class="stat-widget bg-green">
+              <div>
+                <h6 class="text-uppercase small mb-1" style="opacity: 0.9;">Total Funds Raised</h6>
+                <h3 class="font-weight-bold mb-0 text-white" id="statDonationTotal">₹4,85,600</h3>
+              </div>
+              <span class="icon-credit-card" style="font-size: 32px; opacity: 0.7;"></span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-widget bg-blue">
+              <div>
+                <h6 class="text-uppercase small mb-1" style="opacity: 0.9;">Verified Donors</h6>
+                <h3 class="font-weight-bold mb-0 text-white">312</h3>
+              </div>
+              <span class="icon-users" style="font-size: 32px; opacity: 0.7;"></span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-widget bg-orange">
+              <div>
+                <h6 class="text-uppercase small mb-1" style="opacity: 0.9;">Active Volunteers</h6>
+                <h3 class="font-weight-bold mb-0 text-white" id="statVolCount">94</h3>
+              </div>
+              <span class="icon-hand-stop-o" style="font-size: 32px; opacity: 0.7;"></span>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-widget bg-purple">
+              <div>
+                <h6 class="text-uppercase small mb-1" style="opacity: 0.9;">Learning Centres</h6>
+                <h3 class="font-weight-bold mb-0 text-white">8</h3>
+              </div>
+              <span class="icon-building" style="font-size: 32px; opacity: 0.7;"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-0 shadow-sm rounded admin-panel-card p-4">
+          <ul class="nav nav-pills admin-tab-nav mb-4" id="adminTabs" role="tablist">
+            <li class="nav-item">
+          <a class="nav-link" href="donate.html" onclick="window.location.href='donate.html'; return false;"><i class="fas fa-hand-holding-heart me-1"></i>Donate</a>
+</li>
+            <li class="nav-item">
+              <a class="nav-link" id="volunteers-tab" data-toggle="pill" href="#tab-volunteers" role="tab">Volunteer Approvals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="products-tab" data-toggle="pill" href="#tab-products" role="tab">Manage Shop Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="social-tab" data-toggle="pill" href="#tab-social" role="tab">Social Media Posts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="settings-tab" data-toggle="pill" href="#tab-settings" role="tab">System Gateway</a>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="adminTabContent">
+            
+            <div class="tab-pane fade show active" id="tab-donations" role="tabpanel">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="font-weight-bold mb-0">Audited Inward Transactions</h5>
+                <button class="btn btn-sm btn-outline-success font-weight-bold" onclick="alert('Exporting audit CSV directly to your device...')">
+                  📥 Download CSV Audit Log
+                </button>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover table-striped">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>#Txn ID</th>
+                      <th>Donor Name</th>
+                      <th>Type</th>
+                      <th>Amount</th>
+                      <th>Method</th>
+                      <th>Verification</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>#TLF-9821</code></td>
+                      <td>Pritam Sen</td>
+                      <td><span class="badge badge-info">Individual</span></td>
+                      <td><strong>₹2,500</strong></td>
+                      <td>UPI (PhonePe)</td>
+                      <td><span class="badge badge-success">Verified</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>#TLF-9822</code></td>
+                      <td>TechInnovate Pvt Ltd</td>
+                      <td><span class="badge badge-primary">Corporate</span></td>
+                      <td><strong>₹50,000</strong></td>
+                      <td>Bank NEFT</td>
+                      <td><span class="badge badge-success">Verified</span></td>
+                    </tr>
+                    <tr>
+                      <td><code>#TLF-9823</code></td>
+                      <td>Ananya Banerjee</td>
+                      <td><span class="badge badge-info">Individual</span></td>
+                      <td><strong>₹1,200</strong></td>
+                      <td>UPI (GPay)</td>
+                      <td><span class="badge badge-success">Verified</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-volunteers" role="tabpanel">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="font-weight-bold mb-0">Volunteer Candidates</h5>
+                <span class="badge badge-success">EIILM Student Filter Active</span>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover" id="adminVolunteerTable">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>Candidate Name</th>
+                      <th>Course</th>
+                      <th>Centre Allocated</th>
+                      <th>Phone</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Rahul Roy</td>
+                      <td>BCA (4th Sem)</td>
+                      <td>Tollygunge Centre</td>
+                      <td>+91 98301 22334</td>
+                      <td><span class="badge badge-success">Active</span></td>
+                      <td><button class="btn btn-sm btn-outline-danger" onclick="$(this).closest('tr').remove()">Revoke</button></td>
+                    </tr>
+                    <tr>
+                      <td>Sneha Ghosh</td>
+                      <td>BBA (2nd Sem)</td>
+                      <td>Bidhannagar Centre</td>
+                      <td>+91 98741 55667</td>
+                      <td><span class="badge badge-warning">Pending Review</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-success mr-1" onclick="$(this).parent().prev().html('<span class=\'badge badge-success\'>Active</span>'); $(this).remove();">Approve</button>
+                        <button class="btn btn-sm btn-outline-danger" onclick="$(this).closest('tr').remove()">Reject</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-products" role="tabpanel">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="font-weight-bold mb-0">Kids' Handmade Products Inventory</h5>
+                <button class="btn btn-sm btn-success font-weight-bold" onclick="adminAddNewProduct()">+ Add Product to Store</button>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover" id="adminProductTable">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>Product Title</th>
+                      <th>Category</th>
+                      <th>Price (INR)</th>
+                      <th>Available Units</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Creative Tote Bag</td>
+                      <td>Handicraft</td>
+                      <td>₹450</td>
+                      <td>42</td>
+                      <td><button class="btn btn-sm btn-outline-danger" onclick="$(this).closest('tr').remove()">Remove</button></td>
+                    </tr>
+                    <tr>
+                      <td>Scented Candle</td>
+                      <td>Organic Decor</td>
+                      <td>₹120</td>
+                      <td>85</td>
+                      <td><button class="btn btn-sm btn-outline-danger" onclick="$(this).closest('tr').remove()">Remove</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-social" role="tabpanel">
+              <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+                <div>
+                  <h5 class="font-weight-bold mb-1">Social Media Post Manager</h5>
+                  <p class="text-muted small mb-0">Create, preview, publish, and schedule TLF campaigns, events, and success stories.</p>
+                </div>
+                <span class="badge badge-info mt-2 mt-md-0">Admin Scheduler</span>
+              </div>
+
+              <div class="alert alert-warning small">
+                <strong>Demo scheduling mode:</strong> posts are saved in this browser. Connect the relevant social-media APIs/backend later for real automatic publishing.
+              </div>
+
+              <form id="socialPostForm" onsubmit="return saveSocialPost(event)" class="border rounded p-4 bg-light mb-4">
+                <div class="form-row row">
+                  <div class="col-md-4 form-group">
+                    <label class="font-weight-bold">Post Type</label>
+                    <select id="socialPostType" class="form-control" required>
+                      <option value="Campaign">Campaign</option>
+                      <option value="Event">Event</option>
+                      <option value="Success Story">Success Story</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label class="font-weight-bold">Platform</label>
+                    <select id="socialPlatform" class="form-control" required>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Instagram">Instagram</option>
+                      <option value="LinkedIn">LinkedIn</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label class="font-weight-bold">Schedule</label>
+                    <select id="socialScheduleMode" class="form-control" onchange="toggleSocialSchedule()">
+                      <option value="now">Post Now</option>
+                      <option value="scheduled">Schedule for Later</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div id="socialScheduleFields" class="form-row row" style="display:none;">
+                  <div class="col-md-6 form-group">
+                    <label class="font-weight-bold">Publish Date</label>
+                    <input type="date" id="socialPostDate" class="form-control">
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label class="font-weight-bold">Publish Time</label>
+                    <input type="time" id="socialPostTime" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="font-weight-bold">Post Title</label>
+                  <input type="text" id="socialPostTitle" class="form-control" maxlength="120" placeholder="e.g. TLF Back-to-School Campaign" required>
+                </div>
+                <div class="form-group">
+                  <label class="font-weight-bold">Post Content</label>
+                  <textarea id="socialPostContent" class="form-control" rows="5" maxlength="1000" placeholder="Write an update about your campaign, event, or success story..." required></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="font-weight-bold">Hashtags <span class="text-muted font-weight-normal">(optional)</span></label>
+                  <input type="text" id="socialPostHashtags" class="form-control" placeholder="#TowardsLifeFoundation #TLF #Education">
+                </div>
+
+                <div class="border rounded bg-white p-3 mb-3" id="socialPostPreview">
+                  <div class="small text-muted mb-1">LIVE PREVIEW</div>
+                  <h6 id="previewSocialTitle" class="font-weight-bold mb-2">Your post title will appear here</h6>
+                  <p id="previewSocialContent" class="mb-2 text-dark">Your post content will appear here.</p>
+                  <div id="previewSocialTags" class="text-success small"></div>
+                </div>
+
+                <button type="submit" class="btn btn-success font-weight-bold mr-2" id="socialSubmitBtn">
+                  <span class="icon-paper-plane mr-1"></span> Post Now
+                </button>
+                <button type="button" class="btn btn-outline-secondary font-weight-bold" onclick="resetSocialPostForm()">Clear</button>
+              </form>
+
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="font-weight-bold mb-0">Scheduled & Published Posts</h5>
+                  <button type="button" class="btn btn-sm btn-outline-danger" onclick="clearSocialPosts()">Clear All</button>
+                </div>
+                <div class="table-responsive">
+                  <table class="table table-hover" id="socialPostsTable">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Type</th><th>Platform</th><th>Title</th><th>Publish Time</th><th>Status</th><th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+                <div id="socialEmptyState" class="text-center text-muted py-4">No social media posts created yet.</div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-settings" role="tabpanel">
+              <h5 class="font-weight-bold mb-3">Administrative Credentials & Notifications</h5>
+              <div class="form-row row">
+                <div class="col-md-6 form-group">
+                  <label class="font-weight-bold">Primary UPI Merchant VPA</label>
+                  <input type="text" class="form-control" value="towardslifefoundation@sbi" readonly>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label class="font-weight-bold">Admin Dispatch Email</label>
+                  <input type="email" class="form-control" value="admin@towardslifefoundation.org">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- USER / VOLUNTEER LOGIN MODAL -->
+    <div class="modal fade" id="userLoginModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow-lg rounded" style="overflow: hidden;">
+          <div class="modal-header bg-success text-white p-4">
+            <h5 class="modal-title font-weight-bold text-white">
+              <span class="icon-user mr-2"></span> Student & Volunteer Sign-In
+            </h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-4">
+            <!-- Login / New User Options -->
+            <div class="auth-switcher mb-4" role="tablist" aria-label="Account options">
+              <button type="button" class="auth-tab active" id="signInTab" onclick="switchAuthTab('signin')">
+                <span class="icon-user mr-1"></span> Log in
+              </button>
+              <button type="button" class="auth-tab" id="newUserTab" onclick="switchAuthTab('signup')">
+                <span class="icon-user-plus mr-1"></span> Sign in
+              </button>
+            </div>
+
+            <div id="signInPanel">
+              <form onsubmit="return handleUserLogin(event)">
+              <div class="form-group mb-3">
+                <label class="font-weight-bold text-dark">Registered Email / Student Roll</label>
+                <input type="text" class="form-control" placeholder="e.g. rollno@eiilm.edu" required>
+              </div>
+              <div class="form-group mb-4">
+                <label class="font-weight-bold text-dark">Password</label>
+                <input type="password" class="form-control" placeholder="••••••••" required>
+              </div>
+                <button type="submit" class="btn btn-success btn-block py-2 font-weight-bold">
+                  Sign In
+                </button>
+              </form>
+            </div>
+
+            <div id="signUpPanel" style="display:none;">
+              <form onsubmit="return handleNewUserRegistration(event)">
+                <div class="form-group mb-3">
+                  <label class="font-weight-bold text-dark">Full Name</label>
+                  <input type="text" id="newUserName" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group mb-3">
+                  <label class="font-weight-bold text-dark">Email Address</label>
+                  <input type="email" id="newUserEmail" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group mb-3">
+                  <label class="font-weight-bold text-dark">Student Roll / User ID</label>
+                  <input type="text" id="newUserId" class="form-control" placeholder="Enter your roll number or user ID" required>
+                </div>
+                <div class="form-group mb-4">
+                  <label class="font-weight-bold text-dark">Create Password</label>
+                  <input type="password" id="newUserPassword" class="form-control" placeholder="Create a password" minlength="6" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block py-2 font-weight-bold">
+                  Create Account
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer bg-light p-3 text-center justify-content-center">
+            <small class="text-muted">Need volunteer access? Contact EIILM TLF coordinators.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADMIN LOGIN MODAL (EMP ID VALIDATION) -->
+    <div class="modal fade" id="adminLoginModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content border-0 shadow-lg rounded" style="overflow: hidden; border: 1px solid #f59e0b;">
+          <div class="modal-header bg-dark text-white p-4" style="border-bottom: 3px solid #f59e0b;">
+            <h5 class="modal-title font-weight-bold text-warning">
+              <span class="icon-shield mr-2"></span> TLF Admin Authority Gateway
+            </h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body p-4 bg-white">
+            <div class="alert alert-secondary small mb-3">
+              🔒 <strong>Restricted:</strong> Authorized TLF / EIILM board members only.
+            </div>
+            <form id="adminAuthForm" onsubmit="return handleAdminLogin(event)">
+              <div class="form-group mb-3">
+                <label class="font-weight-bold text-dark">Admin Employee ID (Emp ID) *</label>
+                <input type="text" id="adminEmpId" class="form-control" placeholder="e.g. TLF-ADM-01" value="TLF-ADM-01" required>
+                <small class="text-muted">Default demo ID: <code>TLF-ADM-01</code></small>
+              </div>
+              <div class="form-group mb-3">
+                <label class="font-weight-bold text-dark">Official Admin Email *</label>
+                <input type="email" id="adminEmail" class="form-control" placeholder="admin@towardslifefoundation.org" value="admin@tlf.org" required>
+              </div>
+              <div class="form-group mb-4">
+                <label class="font-weight-bold text-dark">Security PIN / Access Key *</label>
+                <input type="password" id="adminPass" class="form-control" placeholder="••••••••" value="admin123" required>
+              </div>
+              <button type="submit" class="btn btn-warning btn-block py-2 font-weight-bold shadow-sm text-dark">
+                Unlock Admin Command Suite
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer bg-light p-3 text-center justify-content-center">
+            <small class="text-muted">Towards Life Foundation India &bull; Internal System Control</small>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- ===================================================
+         24/7 AI CHATBOT INTERFACE WIDGET
+    =================================================== -->
+    <div id="tlfChatbotContainer">
+      <!-- Toggle Button -->
+      <button class="tlf-chatbot-toggle" id="tlfChatToggle" onclick="toggleTlfChat()" title="Talk with TLF AI Assistant">
+        <span class="tlf-chatbot-pulse"></span>
+        <span class="icon-chat" id="tlfChatIcon"></span>
+      </button>
+
+      <!-- Chat Window -->
+      <div class="tlf-chat-window" id="tlfChatWindow">
+        <!-- Header -->
+        <div class="tlf-chat-header">
+          <div class="tlf-chat-header-info">
+            <div class="tlf-chat-avatar">AI</div>
+            <div>
+              <h6 class="tlf-chat-title">TLF AI Assistant</h6>
+              <div class="tlf-chat-status"><span class="tlf-chat-status-dot"></span> 24/7 Live Support</div>
+            </div>
+          </div>
+          <button class="tlf-chat-close" onclick="toggleTlfChat()">&times;</button>
+        </div>
+
+        <!-- Body / Chat History -->
+        <div class="tlf-chat-body" id="tlfChatBody">
+          <div class="tlf-chat-msg bot">
+            Hello! 👋 Welcome to <strong>Towards Life Foundation (TLF)</strong>. I am your 24/7 AI assistant. How may I assist you today?
+          </div>
+          <div class="tlf-chat-chips">
+            <span class="tlf-chip" onclick="sendSuggestedQuery('Tell me about TLF mission')">About TLF</span>
+            <span class="tlf-chip" onclick="sendSuggestedQuery('How can I donate?')">How to Donate</span>
+            <span class="tlf-chip" onclick="sendSuggestedQuery('Can I join as a volunteer?')">Volunteer Info</span>
+            <span class="tlf-chip" onclick="sendSuggestedQuery('What is in the handmade shop?')">Our Shop</span>
+          </div>
+          <div class="tlf-typing-indicator" id="tlfTypingIndicator">TLF AI is typing...</div>
+        </div>
+
+        <!-- Input Footer -->
+        <form class="tlf-chat-footer" onsubmit="return handleChatSubmit(event)">
+          <input type="text" id="tlfChatInput" class="tlf-chat-input" placeholder="Type your question..." autocomplete="off" required>
+          <button type="submit" class="tlf-chat-send">
+            <span class="icon-paper-plane"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+    
+<!-- FOOTER -->
+    <footer class="ftco-footer ftco-section img" style="background: #191919; padding: 5rem 0 2rem; color: rgba(255,255,255,0.7);">
+      <div class="container">
+        <div class="row mb-5">
+          
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 font-weight-bold text-white" style="font-size: 16px; letter-spacing: 1px;">ABOUT US</h2>
+              <p class="small" style="line-height: 1.8;">Towards Life Foundation(TLF) provides education, economic independence, and healthcare for street and pavement children.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4 d-flex gap-3">
+                <li class="mr-3"><a href="#" class="text-white" style="background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;"><span class="icon-twitter"></span></a></li>
+                <li class="mr-3"><a href="#" class="text-white" style="background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;"><span class="icon-facebook"></span></a></li>
+                <li class="mr-3"><a href="#" class="text-white" style="background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 font-weight-bold text-white" style="font-size: 16px; letter-spacing: 1px;">RECENT INITIATIVES</h2>
+              <div class="block-21 mb-4 d-flex">
+                <div class="text">
+                  <h5 class="heading mb-1"><a href="Range of activities.html" class="text-white font-weight-bold" style="font-size: 14px; line-height: 1.5;">Micro-credit structural support for slum families</a></h5>
+                  <div class="meta text-muted small mt-2">
+                    <div class="mb-1"><span class="icon-calendar mr-1"></span> August 2026 &nbsp;&nbsp; <span class="icon-user mr-1"></span> TLF Admin</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2 font-weight-bold text-white" style="font-size: 16px; letter-spacing: 1px;">QUICK LINKS</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html#home-section" class="py-1 d-block text-muted">Home</a></li>
+                
+                <!-- ABOUT US Dropdown (Updated with exact menu items) -->
+                <li class="dropdown-footer-item">
+                  <a href="about.html" class="py-1 d-flex justify-content-between align-items-center text-white font-weight-bold toggle-submenu" style="font-size: 13px; cursor: pointer;" onclick="toggleSubmenu(event, 'aboutSubmenu')">
+                    <span>ABOUT US</span> <span class="ion-ios-arrow-down small" id="aboutArrow"></span>
+                  </a>
+                  <ul id="aboutSubmenu" class="list-unstyled pl-3" style="display: none; transition: all 0.3s ease;">
+                    <li><a href="overview.html" class="py-1 d-block text-muted small">&bull; Overview & Identity</a></li>
+                    <li><a href="vision.html" class="py-1 d-block text-muted small">&bull; Our Vision</a></li>
+                    <li><a href="voice-of-leaders.html" class="py-1 d-block text-muted small">&bull; Voice of Leaders</a></li>
+                    <li><a href="administrative.html" class="py-1 d-block text-muted small">&bull; Administrative Hierarchy</a></li>
+                    <li><a href="awards.html" class="py-1 d-block text-muted small">&bull; Awards & Recognition</a></li>
+                    <li><a href="future-initiatives.html" class="py-1 d-block text-muted small">&bull; Future Initiatives</a></li>
+                    <li><a href="branches.html" class="py-1 d-block text-muted small">&bull; Branches</a></li>
+                  </ul>
+                </li>
+
+                <!-- RANGE OF ACTIVITIES Dropdown (Updated with exact menu items) -->
+                <li class="dropdown-footer-item mt-2">
+                  <a href="Range of activities.html" class="py-1 d-flex justify-content-between align-items: center text-white font-weight-bold toggle-submenu" style="font-size: 13px; cursor: pointer;" onclick="toggleSubmenu(event, 'activitiesSubmenu')">
+                    <span>RANGE OF ACTIVITIES</span> <span class="ion-ios-arrow-down small" id="activitiesArrow"></span>
+                  </a>
+                  <ul id="activitiesSubmenu" class="list-unstyled pl-3" style="display: none; transition: all 0.3s ease;">
+                    <li><a href="computer-education.html" class="py-1 d-block text-muted small">&bull; Computer Education</a></li>
+                    <li><a href="healthcare-&-medical.html" class="py-1 d-block text-muted small">&bull; Healthcare & Medical</a></li>
+                    <li><a href="food_water.html" class="py-1 d-block text-muted small">&bull; Food & Water Supply</a></li>
+                    <li><a href="cultural-art-workshops.html" class="py-1 d-block text-muted small">&bull; Cultural & Art Workshops</a></li>
+                    <li><a href="flood-relief-and-humanitarian-response.html" class="py-1 d-block text-muted small">&bull; Flood Relief and Humanitarian Response</a></li>
+                  </ul>
+                </li>
+
+                <li class="mt-2"><a href="gallery.html" class="py-1 d-block text-muted">Gallery</a></li>
+                <li><a href="shop.html" class="py-1 d-block text-muted">Our Shop</a></li>
+                <li><a href="donate.html" class="py-1 d-block text-muted">Donate</a></li>
+                <li><a href="success-stories.html" class="py-1 d-block text-muted">Success Stories</a></li>
+                <li><a href="volunteer.html" class="py-1 d-block text-muted">Volunteer</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 font-weight-bold text-white" style="font-size: 16px; letter-spacing: 1px;">CONTACT INFO</h2>
+              <div class="block-23 mb-3 text-muted">
+                <ul class="list-unstyled">
+                  <li class="mb-3 d-flex"><span class="icon icon-map-marker mr-3 mt-1 text-white"></span><span class="text-muted">EIILM Kolkata Campus, Kolkata, West Bengal, India</span></li>
+                  <li class="mb-3 d-flex"><a href="tel:+913322897780" class="text-muted"><span class="icon icon-phone mr-3 text-white"></span> +91 33 2289 7780</a></li>
+                  <li class="d-flex"><a href="mailto:info@towardslifefoundation.org" class="text-muted"><span class="icon icon-envelope mr-3 text-white"></span> info@towardslifefoundation.org</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+          <div class="col-md-12 text-center text-muted small">
+            <p class="mb-0">
+              &copy; <script>document.write(new Date().getFullYear());</script> Towards Life Foundation. All Rights Reserved. | Designed & Developed by TLF Tech Team
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dropdown Toggle Script -->
+    <script>
+      function toggleSubmenu(event, submenuId) {
+        event.preventDefault();
+        var submenu = document.getElementById(submenuId);
+        var arrowId = submenuId === 'aboutSubmenu' ? 'aboutArrow' : 'activitiesArrow';
+        var arrow = document.getElementById(arrowId);
+        
+        if (submenu.style.display === "none" || submenu.style.display === "") {
+          submenu.style.display = "block";
+          arrow.className = "ion-ios-arrow-up small";
+        } else {
+          submenu.style.display = "none";
+          arrow.className = "ion-ios-arrow-down small";
+        }
+      }
+    </script>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

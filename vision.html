@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Fonts: Poppins, Montserrat & Caveat (Handwriting Style) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,700;1,800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Our Vision - Towards Life Foundation - TLF NGO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Third-Party CSS Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/vision.css">
+
+    <!-- Custom Styles for Professional Dark Theme, Mandala Cards & Chatbot -->
+    <style>
+      body {
+        background-color: #0b0f19;
+        font-family: 'Poppins', sans-serif;
+        color: #e2e8f0;
+      }
+      
+      /* Hero Section Styling */
+      .vision-hero-section {
+        position: relative;
+        background: #111827;
+        padding: 160px 0 100px 0;
+        overflow: hidden;
+        color: #ffffff;
+      }
+      .vision-hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: linear-gradient(135deg, rgba(11, 15, 25, 0.96) 0%, rgba(17, 24, 39, 0.9) 100%), url('videos/Slide show.mp4') center/cover no-repeat;
+        z-index: 1;
+      }
+      .vision-hero-content {
+        position: relative;
+        z-index: 2;
+      }
+      .vision-hero-title-main {
+        font-family: 'Montserrat', sans-serif;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 3rem;
+        color: #ffffff;
+        margin-bottom: 5px;
+      }
+      .vision-hero-title-sub {
+        font-family: 'Montserrat', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 3.2rem;
+        color: #ffffff;
+        margin-bottom: 30px;
+        line-height: 1.1;
+      }
+      .btn-explore-about {
+        display: inline-block;
+        background: transparent;
+        color: #ffffff;
+        border: 2px solid #22c55e;
+        padding: 12px 30px;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .btn-explore-about:hover {
+        background: #22c55e;
+        color: #000000;
+        box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+        text-decoration: none;
+      }
+
+      /* Main Wrapper with Soft Dark Tone */
+      .vision-main-wrapper {
+        padding: 80px 0;
+        background: linear-gradient(180deg, #0b0f19 0%, #070a10 100%);
+        position: relative;
+      }
+      
+      /* Rectangular Cards with Subtle Mandala / Geometric Watermark Graphics */
+      .vision-rect-card {
+        background: rgba(17, 24, 39, 0.88);
+        background-image: radial-gradient(circle at 90% 10%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+                          url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z'/%3E%3Ccircle cx='50' cy='50' r='25' fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.03'/%3E%3C/g%3E%3C/svg%3E");
+        background-repeat: no-repeat, no-repeat;
+        background-position: right top, right 20px center;
+        background-size: auto, 140px;
+        backdrop-filter: blur(12px);
+        border-radius: 16px;
+        border-left: 5px solid #22c55e;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        border-right: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+        padding: 35px 30px;
+        margin-bottom: 30px;
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        overflow: hidden;
+      }
+      .vision-rect-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 45px rgba(34, 197, 94, 0.2);
+        border-left-color: #fbbf24;
+      }
+      .vision-card-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+      }
+      .vision-num-badge {
+        width: 46px;
+        height: 46px;
+        background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1.25rem;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 18px;
+        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+      }
+      .vision-card-title {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #4ade80;
+        margin: 0;
+      }
+      /* Handwriting Font for Vision Descriptions */
+      .vision-card-desc {
+        font-family: 'Caveat', cursive;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        color: #cbd5e1;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      /* Floating AI Chatbot Widget */
+      .tlf-ai-chatbot-widget {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+        color: #ffffff;
+        font-size: 26px;
+        cursor: pointer;
+        z-index: 9999;
+        transition: transform 0.3s ease;
+      }
+      .tlf-ai-chatbot-widget:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    
+    <!-- SINGLE-LINE REARRANGED NAVBAR -->
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top ftco_navbar" id="ftco-navbar">
+      <div class="container-fluid px-lg-4">
+        <a class="navbar-brand" href="index.html#home-section">
+          <img src="images/logo.png" alt="TLF Logo" onerror="this.style.display='none'">
+          <span>TOWARDS LIFE FOUNDATION</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item"><a href="index.html#home-section" class="nav-link">HOME</a></li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ABOUT US
+              </a>
+              <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="aboutDropdown">
+                <a class="dropdown-item" href="overview.html">Overview & Identity</a>
+                <a class="dropdown-item active" href="vision.html">Our Vision</a>
+                <a class="dropdown-item" href="voice-of-leaders.html">Voice of Leaders</a>
+                <a class="dropdown-item" href="administrative.html">Administrative Hierarchy</a>
+                <a class="dropdown-item" href="awards.html">Awards & Recognition</a>
+                <a class="dropdown-item" href="future-initiatives.html">Future Initiatives</a>
+                <a class="dropdown-item" href="branches.html">Branches</a>
+              </div>
+            </li>    
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="Range of activities.html" id="activitiesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                RANGE OF ACTIVITIES
+              </a>
+              <div class="dropdown-menu custom-dropdown-menu" aria-labelledby="activitiesDropdown">
+                <a class="dropdown-item" href="computer-education.html">Computer Education</a>
+                <a class="dropdown-item" href="healthcare-&-medical.html">Healthcare & Medical</a>
+                <a class="dropdown-item" href="food_water.html">Food & Water Supply</a>
+                <a class="dropdown-item" href="culture.html">Cultural & Art Work</a>
+                <a class="dropdown-item" href="flood-relief-and-humanitarian-response.html">Flood Relief and Humanitarian Response</a>
+              </div>
+            </li>             
+            <li class="nav-item"><a href="gallery.html" class="nav-link">GALLERY</a></li>
+            <li class="nav-item"><a href="shop.html" class="nav-link">OUR SHOP</a></li>
+            <li class="nav-item"><a href="donate.html" onclick="window.location.href='donate.html'; return false;" class="nav-link">DONATE</a></li>
+            <li class="nav-item"><a href="success story.html" class="nav-link">Success Stories</a></li>
+            <li class="nav-item"><a href="volunteer.html" class="nav-link">Volunteer</a></li>
+
+            <li class="nav-item">
+              <div class="nav-actions-group">
+                <a href="javascript:void(0)" class="btn-nav-login" data-toggle="modal" data-target="#userLoginModal">
+                  <span class="icon-user"></span> LOGIN
+                </a>
+                <a href="javascript:void(0)" class="btn-nav-admin" onclick="openAdminPortal()">
+                  <span class="icon-shield"></span> ADMIN PANEL
+                  <span class="admin-badge">PORTAL</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+
+   <!-- STATIC HERO SECTION (NO ARROWS, NO MULTI-SLIDES) -->
+    <section class="eiilm-hero-section" style="min-height: 75vh; padding: 60px 0;">
+      <div class="hero-video-bg">
+        <video autoplay muted loop playsinline poster="videos/Slide show.mp4">
+          <source src="videos/Slide show.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="hero-dark-overlay"></div>
+
+      <div class="container hero-container">
+        <div class="row align-items-center min-vh-75">
+          <div class="col-lg-6 col-md-9 col-sm-12 hero-text-col">
+            <h1 class="hero-title">
+              Welcome to<br>
+              <span>Towards Life Foundation India</span>
+            </h1>
+            <div class="hero-btn-wrap" style="margin-top: 20px;">
+  <a href="index.html#about-section" class="btn-hero-explore" style="background-color: #ffffff; color: #008000; border: 2px solid #008000; font-weight: 700; padding: 12px 28px; border-radius: 6px; text-decoration: none; display: inline-block; transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#008000'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='#ffffff'; this.style.color='#008000';">
+    Explore About Us
+  </a>
+</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-social-sidebar">
+        <a href="#" class="social-icon fb"><i class="icon-facebook"></i></a>
+        <a href="#" class="social-icon insta"><i class="icon-instagram"></i></a>
+        <a href="#" class="social-icon in"><i class="icon-linkedin"></i></a>
+        <a href="#" class="social-icon yt"><i class="icon-youtube"></i></a>
+      </div>
+    </section>
+    <!-- END HERO SECTION -->
+
+    <!-- OUR VISION DETAILED RECTANGULAR CARDS SECTION -->
+    <div class="vision-main-wrapper" id="vision-content-section">
+      <div class="container">
+        
+        <div class="text-center mb-5" data-aos="fade-down">
+          <span class="badge badge-warning text-dark font-weight-bold px-3 py-2 mb-2" style="font-size: 0.9rem;">TLF CORE PRINCIPLES</span>
+          <h2 class="text-white font-weight-bold" style="font-family: 'Montserrat', sans-serif; font-size: 2.5rem;">OUR VISION & PILLARS</h2>
+          <p class="text-muted mx-auto" style="max-width: 700px; font-size: 1.1rem;">Envisioning a society where every child receives the opportunity to learn, grow, discover their true abilities, and contribute meaningfully to the world.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            
+            <!-- Pillar 1 -->
+            <div class="vision-rect-card" data-aos="fade-up" data-aos-duration="800">
+              <div class="vision-card-header">
+                <div class="vision-num-badge">1</div>
+                <h3 class="vision-card-title">Mental Strength</h3>
+              </div>
+              <p class="vision-card-desc">
+                Developing mental resilience, self-confidence, emotional stability, determination, and a positive outlook among children living in marginalized communities.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="vision-rect-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+              <div class="vision-card-header">
+                <div class="vision-num-badge">2</div>
+                <h3 class="vision-card-title">Education</h3>
+              </div>
+              <p class="vision-card-desc">
+                Providing foundational and holistic education encompassing the science of life, science of nature, art of work, art of thought, and art of creation, while encouraging curiosity, creativity, and lifelong learning.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="vision-rect-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+              <div class="vision-card-header">
+                <div class="vision-num-badge">3</div>
+                <h3 class="vision-card-title">Unfolding the Inner Spirit</h3>
+              </div>
+              <p class="vision-card-desc">
+                Identifying the inherent abilities and hidden potential within every child and providing opportunities to transform those strengths into meaningful personal and professional pursuits.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="vision-rect-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+              <div class="vision-card-header">
+                <div class="vision-num-badge">4</div>
+                <h3 class="vision-card-title">Economic Empowerment</h3>
+              </div>
+              <p class="vision-card-desc">
+                Supporting children through foundational education, skill development, and vocational exposure so that they can gradually become self-reliant, productive, and responsible contributors to their families and communities.
+              </p>
+            </div>
+
+            <!-- Pillar 5 -->
+            <div class="vision-rect-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+              <div class="vision-card-header">
+                <div class="vision-num-badge">5</div>
+                <h3 class="vision-card-title">Spiritual and Human Values</h3>
+              </div>
+              <p class="vision-card-desc">
+                Promoting values associated with Sattwa Guna, including truth, righteousness, compassion, self-discipline, and ethical conduct, with the objective of nurturing responsible and value-driven individuals.
+              </p>
+            </div>
+
+            <!-- Pillar 6 -->
+            <div class="vision-rect-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+              <div class="vision-card-header">
+                <div class="vision-num-badge">6</div>
+                <h3 class="vision-card-title">Ethics and Moral Values</h3>
+              </div>
+              <p class="vision-card-desc">
+                Cultivating discipline, integrity, social responsibility, respect, compassion, and a strong sense of moral responsibility, enabling children to become responsible members of society.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END VISION CONTENT -->
+
+<!-- ===================================================
+         24/7 AI CHATBOT INTERFACE WIDGET
+    =================================================== -->
+    <div id="tlfChatbotContainer">
+      <!-- Toggle Button -->
+      <button class="tlf-chatbot-toggle" id="tlfChatToggle" onclick="toggleTlfChat()" title="Talk with TLF AI Assistant">
+        <span class="tlf-chatbot-pulse"></span>
+        <span class="icon-chat" id="tlfChatIcon"></span>
+      </button>
+
+      <!-- Chat Window -->
+      <div class="tlf-chat-window" id="tlfChatWindow">
+        <!-- Header -->
+        <div class="tlf-chat-header">
+          <div class="tlf-chat-header-info">
+            <div class="tlf-chat-avatar">AI</div>
+            <div>
+              <h6 class="tlf-chat-title">TLF AI Assistant</h6>
+              <div class="tlf-chat-status"><span class="tlf-chat-status-dot"></span> 24/7 Live Support</div>
+            </div>
+          </div>
+          <button class="tlf-chat-close" onclick="toggleTlfChat()">&times;</button>
+        </div>
+
+        <!-- Body / Chat History -->
+        <div class="tlf-chat-body" id="tlfChatBody">
+          <div class="tlf-chat-msg bot">
+            Hello! 👋 Welcome to <strong>Towards Life Foundation (TLF)</strong>. I am your 24/7 AI assistant. How may I assist you today?
+          </div>
+          <div class="tlf-chat-chips">
+            <span class="tlf-chip" onclick="sendSuggestedQuery('Tell me about TLF mission')">About TLF</span>
+            <span class="tlf-chip" onclick="sendSuggestedQuery('How can I donate?')">How to Donate</span>
+            <span class="tlf-chip" onclick="sendSuggestedQuery('Can I join as a volunteer?')">Volunteer Info</span>
+            <span class="tlf-chip" onclick="sendSuggestedQuery('What is in the handmade shop?')">Our Shop</span>
+          </div>
+          <div class="tlf-typing-indicator" id="tlfTypingIndicator">TLF AI is typing...</div>
+        </div>
+
+        <!-- Input Footer -->
+        <form class="tlf-chat-footer" onsubmit="return handleChatSubmit(event)">
+          <input type="text" id="tlfChatInput" class="tlf-chat-input" placeholder="Type your question..." autocomplete="off" required>
+          <button type="submit" class="tlf-chat-send">
+            <span class="icon-paper-plane"></span>
+          </button>
+        </form>
+      </div>
+    </div>
+<!-- FOOTER -->
+    <footer class="ftco-footer ftco-section img" style="background: #191919; padding: 5rem 0 2rem; color: rgba(255,255,255,0.7);">
+      <div class="container">
+        <div class="row mb-5">
+          
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 font-weight-bold text-white" style="font-size: 16px; letter-spacing: 1px;">ABOUT US</h2>
+              <p class="small" style="line-height: 1.8;">Towards Life Foundation(TLF) provides education, economic independence, and healthcare for street and pavement children.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4 d-flex gap-3">
+                <li class="mr-3"><a href="#" class="text-white" style="background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;"><span class="icon-twitter"></span></a></li>
+                <li class="mr-3"><a href="#" class="text-white" style="background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;"><span class="icon-facebook"></span></a></li>
+                <li class="mr-3"><a href="#" class="text-white" style="background: rgba(255,255,255,0.08); width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 font-weight-bold text-white" style="font-size: 16px; letter-spacing: 1px;">RECENT INITIATIVES</h2>
+              <div class="block-21 mb-4 d-flex">
+                <div class="text">
+                  <h5 class="heading mb-1"><a href="Range of activities.html" class="text-white font-weight-bold" style="font-size: 14px; line-height: 1.5;">Micro-credit structural support for slum families</a></h5>
+                  <div class="meta text-muted small mt-2">
+                    <div class="mb-1"><span class="icon-calendar mr-1"></span> August 2026 &nbsp;&nbsp; <span class="icon-user mr-1"></span> TLF Admin</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2 font-weight-bold text-white" style="font-size: 16px; letter-spacing: 1px;">QUICK LINKS</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html#home-section" class="py-1 d-block text-muted">Home</a></li>
+                
+                <!-- ABOUT US Dropdown (Updated with exact menu items) -->
+                <li class="dropdown-footer-item">
+                  <a href="about.html" class="py-1 d-flex justify-content-between align-items-center text-white font-weight-bold toggle-submenu" style="font-size: 13px; cursor: pointer;" onclick="toggleSubmenu(event, 'aboutSubmenu')">
+                    <span>ABOUT US</span> <span class="ion-ios-arrow-down small" id="aboutArrow"></span>
+                  </a>
+                  <ul id="aboutSubmenu" class="list-unstyled pl-3" style="display: none; transition: all 0.3s ease;">
+                    <li><a href="overview.html" class="py-1 d-block text-muted small">&bull; Overview & Identity</a></li>
+                    <li><a href="vision.html" class="py-1 d-block text-muted small">&bull; Our Vision</a></li>
+                    <li><a href="voice-of-leaders.html" class="py-1 d-block text-muted small">&bull; Voice of Leaders</a></li>
+                    <li><a href="administrative.html" class="py-1 d-block text-muted small">&bull; Administrative Hierarchy</a></li>
+                    <li><a href="awards.html" class="py-1 d-block text-muted small">&bull; Awards & Recognition</a></li>
+                    <li><a href="future-initiatives.html" class="py-1 d-block text-muted small">&bull; Future Initiatives</a></li>
+                    <li><a href="branches.html" class="py-1 d-block text-muted small">&bull; Branches</a></li>
+                  </ul>
+                </li>
+
+                <!-- RANGE OF ACTIVITIES Dropdown (Updated with exact menu items) -->
+                <li class="dropdown-footer-item mt-2">
+                  <a href="Range of activities.html" class="py-1 d-flex justify-content-between align-items: center text-white font-weight-bold toggle-submenu" style="font-size: 13px; cursor: pointer;" onclick="toggleSubmenu(event, 'activitiesSubmenu')">
+                    <span>RANGE OF ACTIVITIES</span> <span class="ion-ios-arrow-down small" id="activitiesArrow"></span>
+                  </a>
+                  <ul id="activitiesSubmenu" class="list-unstyled pl-3" style="display: none; transition: all 0.3s ease;">
+                    <li><a href="computer-education.html" class="py-1 d-block text-muted small">&bull; Computer Education</a></li>
+                    <li><a href="healthcare-&-medical.html" class="py-1 d-block text-muted small">&bull; Healthcare & Medical</a></li>
+                    <li><a href="food_water.html" class="py-1 d-block text-muted small">&bull; Food & Water Supply</a></li>
+                    <li><a href="cultural-art-workshops.html" class="py-1 d-block text-muted small">&bull; Cultural & Art Workshops</a></li>
+                    <li><a href="flood-relief-and-humanitarian-response.html" class="py-1 d-block text-muted small">&bull; Flood Relief and Humanitarian Response</a></li>
+                  </ul>
+                </li>
+
+                <li class="mt-2"><a href="gallery.html" class="py-1 d-block text-muted">Gallery</a></li>
+                <li><a href="shop.html" class="py-1 d-block text-muted">Our Shop</a></li>
+                <li><a href="donate.html" class="py-1 d-block text-muted">Donate</a></li>
+                <li><a href="success-stories.html" class="py-1 d-block text-muted">Success Stories</a></li>
+                <li><a href="volunteer.html" class="py-1 d-block text-muted">Volunteer</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2 font-weight-bold text-white" style="font-size: 16px; letter-spacing: 1px;">CONTACT INFO</h2>
+              <div class="block-23 mb-3 text-muted">
+                <ul class="list-unstyled">
+                  <li class="mb-3 d-flex"><span class="icon icon-map-marker mr-3 mt-1 text-white"></span><span class="text-muted">EIILM Kolkata Campus, Kolkata, West Bengal, India</span></li>
+                  <li class="mb-3 d-flex"><a href="tel:+913322897780" class="text-muted"><span class="icon icon-phone mr-3 text-white"></span> +91 33 2289 7780</a></li>
+                  <li class="d-flex"><a href="mailto:info@towardslifefoundation.org" class="text-muted"><span class="icon icon-envelope mr-3 text-white"></span> info@towardslifefoundation.org</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+          <div class="col-md-12 text-center text-muted small">
+            <p class="mb-0">
+              &copy; <script>document.write(new Date().getFullYear());</script> Towards Life Foundation. All Rights Reserved. | Designed & Developed by TLF Tech Team
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Dropdown Toggle Script -->
+    <script>
+      function toggleSubmenu(event, submenuId) {
+        event.preventDefault();
+        var submenu = document.getElementById(submenuId);
+        var arrowId = submenuId === 'aboutSubmenu' ? 'aboutArrow' : 'activitiesArrow';
+        var arrow = document.getElementById(arrowId);
+        
+        if (submenu.style.display === "none" || submenu.style.display === "") {
+          submenu.style.display = "block";
+          arrow.className = "ion-ios-arrow-up small";
+        } else {
+          submenu.style.display = "none";
+          arrow.className = "ion-ios-arrow-down small";
+        }
+      }
+    </script>
+    <!-- JAVASCRIPT LIBRARIES & HANDLERS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tlf-data.js"></script>
+    <script>
+      // Initialize AOS Scroll Animations
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            once: true,
+            offset: 100
+          });
+        }
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TLF Administrative Management Suite</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet">
+
+    <!-- Third-Party CSS Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+
+<style>
+body{background:#f5f7fb;font-family:Arial,sans-serif}
+.admin-shell{min-height:100vh}
+.topbar{background:#123b2a;color:#fff;padding:18px 0;box-shadow:0 3px 15px rgba(0,0,0,.12)}
+.card-box{background:#fff;border-radius:14px;padding:22px;box-shadow:0 5px 22px rgba(20,40,60,.08);height:100%}
+.stat{border-left:5px solid #28a745}
+.stat h2{font-weight:800;margin:0}
+.table-wrap{overflow:auto;max-height:440px}
+.table thead th{position:sticky;top:0;background:#123b2a;color:#fff;border:0;z-index:1}
+.btn-excel{background:#198754;color:#fff;border:0}
+.btn-excel:hover{background:#146c43;color:#fff}
+.badge-soft{background:#e8f5ee;color:#198754}
+.search-box{max-width:320px}
+.empty{padding:35px;text-align:center;color:#888}
+</style>
+</head>
+<body>
+<div class="admin-shell">
+<header class="topbar">
+<div class="container d-flex flex-wrap justify-content-between align-items-center">
+<div>
+<div class="small text-uppercase" style="opacity:.75">TLF Administration</div>
+<h2 class="mb-0 font-weight-bold">Administrative Management Suite</h2>
+</div>
+<div class="mt-2 mt-md-0">
+<a href="index.html" class="btn btn-light mr-2">← Website</a>
+<button class="btn btn-excel font-weight-bold" onclick="exportAllToExcel()">⬇ Export All Data to Excel</button>
+</div>
+</div>
+</header>
+
+<main class="container py-5">
+<div class="alert alert-info">
+<strong>Central data storage:</strong> website submissions are saved in browser storage and collected here. Use <strong>Export All Data to Excel</strong> to create one Excel workbook with separate sheets for each data category.
+</div>
+
+<div class="row mb-4" id="stats"></div>
+
+<div class="card-box mb-4">
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+<div><h4 class="font-weight-bold mb-1">Data Center</h4><p class="text-muted mb-0">View, search and export every stored record.</p></div>
+<div class="mt-2 mt-md-0">
+<input id="tableSearch" class="form-control search-box" placeholder="Search current table..." oninput="renderCurrentTable()">
+</div>
+</div>
+<div class="btn-group flex-wrap mb-4" id="tabs"></div>
+<div class="table-wrap" id="tableContainer"></div>
+</div>
+
+<div class="card-box">
+<h4 class="font-weight-bold">Excel & Backup</h4>
+<p class="text-muted">The Excel export contains separate worksheets for Users, Donations, Volunteers, Social Posts, Products and all other captured website submissions.</p>
+<button class="btn btn-excel mr-2" onclick="exportAllToExcel()">Export Complete Excel Workbook</button>
+<button class="btn btn-outline-secondary" onclick="downloadJSONBackup()">Download JSON Backup</button>
+<button class="btn btn-outline-danger float-right" onclick="clearAllStoredData()">Clear Stored Data</button>
+</div>
+</main>
+</div>
+
+<!-- SheetJS creates a real .xlsx workbook in the browser -->
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="js/admin.js" defer></script>
+</body>
+</html>
